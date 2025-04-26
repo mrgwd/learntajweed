@@ -1,11 +1,8 @@
 import { cn } from "@/lib/utils";
-
+type NotificationType = "info" | "danger" | "warning";
 interface Props {
-  title?: string;
-  description?: string;
-  icon?: string;
-  type?: "danger" | "info" | "warning";
-  children?: React.ReactNode;
+  type?: NotificationType;
+  children: React.ReactNode;
 }
 export default function Note({ type = "info", children }: Props) {
   const baseClasses =
